@@ -126,7 +126,11 @@ document.addEventListener("DOMContentLoaded", () => {
     <script>
       let myBanner = new materialSmartBanner();
       console.log(myBanner)
-      document.querySelectorAll('.js-launch-demo')[0].addEventListener('click touchstart', function(){
+      document.querySelectorAll('.js-launch-demo')[0].addEventListener('click', function(){
+        myBanner.banner.show();
+      })
+      // Yuck
+      document.querySelectorAll('.js-launch-demo')[0].addEventListener('touchstart', function(){
         myBanner.banner.show();
       })
     </script>
